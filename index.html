@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> COVID-19 </title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js "></script>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!----start--navigation----->
+    <div class="home-screen"></div>
+    <nav id="opc" class="navbar navbar-expand-md fixed-top shadow bg-light navbar-light">
+        <div class="container text-uppercase">
+
+            <a class="navbar-brand " href="#"><img src="img/logo.png " class="logo"></a>
+
+            <button type="button" class="navbar-toggler " data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+            <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                <ul class="navbar-nav  smooth-scroll ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">ACCUEIL<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-text" href="#produit">PRODUITS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#add">AJOUTER PRODUIT</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">NOUS JOINDRE</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div id="cart" class="cart" data-toggle="modal" data-target="#exampleModalLong" data-totalitems="0">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </nav>
+
+    </div>
+    <!----END NAVIGATION----->
+
+
+    <!-- products area -->
+
+    <div class="container ls-product-section">
+        <div id="produit" class="page-header"></div>
+        <div class="container ">
+            <h3 class="h1-responsive font-weight-bold text-center my-4 "> NOS PRODUITS </h3>
+            <div class="line"></div>
+
+        </div>
+        <div id="listproduct" class="row">
+        </div>
+    </div>
+    <!-- end products area  -->
+
+    <!-- About area -->
+    <section class="about white-color" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-white">
+
+                    <h2> <span>NOS </span> Produit</h2>
+                    <p>Bien que nos produits soient les meilleurs au monde, nous devons toujours laisser une distance de sécurité de 2M</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ About area end-->
+
+
+    <!--AJOUTER PRODUIT-->
+    <div class="container">
+        <div id="add" class="page-header">
+
+            <div class="container">
+                <h3 class=" h1-responsive font-weight-bold text-center my-4 ">AJOUTER PRODUIT</h3>
+                <div class="line"></div>
+            </div>
+            <div class="row">
+                <div class=" container col-md-12 mb-md-0 mb-5 ">
+                    <form id="add-product" name="add-product " method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <label for="name" class="p-2 ">Nom Produit:</label>
+                                <input type="text" onfocus=this.value='' id="name" name="name" class="form-control form-inline formName">
+                            </div>
+                            <div class="col-md-12 ">
+                                <label for="price " class=" p-2">Prix:</label>
+                                <input type="text" onfocus=this.value='' id="price" name="price" class="form-control formPrice">
+                            </div>
+                            <div class="col-md-12 ">
+                                <label for="photo " class="p-2">image Produit :</label>
+                                <input type="file" onfocus=this.value='' id="files" name="files" class="form-control p-1 btn-dange formPhoto" accept="image/*" multiple="false">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="text-center text-md-left pt-3 ">
+                        <button type="button " class="add-products btn btn-lg btn-danger">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--AJOUTER PRODUIT-->
+
+    <!-- counter section -->
+
+    <div id="counter" class=" container-fluid text-center shadow">
+        <div class=" about-counter ">
+            <div class="row ">
+                <div class="col-md-3 col-sm-6  about-counter-single ">
+                    <div class="counter "> <span class="fa fa-truck icon "></span>
+                        <h3>LIVRAISON GRATUITE</h3>
+                        <p>Expédition dans le monde pour les commandes de plus de 99 $</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6  about-counter-single ">
+                    <div class="counter "> <span class="fa fa-gift icon "></span>
+                        <h3>MEILLEURES OFFRES</h3>
+                        <p> Nous vous garantissons les meilleures offres</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6  about-counter-single ">
+                    <div class="counter "> <span class="fa fa-credit-card icon "></span>
+                        <h4>REMBOURSEMENT</h4>
+                        <p>Ne pas recevoir un article.. appliqué pour récompenser </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 ">
+                    <div class="counter "> <span class="fa fa-headphones icon "></span>
+                        <h3>SUPPORT 24/7</h3>
+                        <p> Nous vous attendons dans 24 heures </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ counter section end-->
+
+
+    <!--nous joindre-->
+
+
+
+    <div class="container">
+        <div id="contact" class="page-header">
+            <div class="container ">
+                <h3 class="h1-responsive font-weight-bold text-center my-4 ">NOUS JOINDRE</h3>
+                <div class="line "></div>
+            </div>
+            <p class="text-center w-responsive mx-auto mb-5 ">Aves vous des questions?S.V.P , N'hésitez pas à nous contacter directement. Notre équipe reviendra vers vous en quelques heures pour vous aider.</p>
+            <div class="row ">
+                <div class="col-md-9 mb-md-0 mb-5 ">
+                    <form id="contact-form" name="contact-form">
+                        <div class="row ">
+                            <div class="col-md-6 ">
+                                <input type="text " id="name " name="name " class="form-control ">
+                                <label for="name " class=" p-2 ">Votre nom</label>
+                            </div>
+                            <div class="col-md-6 ">
+                                <input type="text " id="email " name="email " class="form-control ">
+                                <label for="email " class=" p-2 ">Votre email</label>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-12 ">
+                                <input type="text " id="subject " name="subject " class="form-control ">
+                                <label for="subject " class=" p-2 ">Le sujet</label>
+
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-12 ">
+                                <textarea type="text " id="message " name="message " rows="2 " class="form-control md-textarea "></textarea>
+                                <label for="message " class=" p-2 ">Votre message</label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="text-center text-md-left ">
+                        <button type="button " id="message" class="btn btn-lg btn-danger ">Envoyer</button>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center ">
+                    <ul class="list-unstyled mb-0 ">
+                        <li><i class="fas fa-map-marker-alt fa-2x "></i>
+                            <p>Saint-Laurent , QC , CA</p>
+                        </li>
+
+                        <li><i class="fas fa-phone mt-4 fa-2x "></i>
+                            <p>+ 01 438-555-4444</p>
+                        </li>
+
+                        <li><i class="fas fa-envelope mt-4 fa-2x "></i>
+                            <p>contact@covid19.com</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--nous joindre-->
+
+    <!-- ALL MODALS-->
+
+    <!-- Modal cart -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">VENTE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                     <span aria-hidden="true">&times;</span>
+                      </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container content-section">
+                        <h2 class="section-header">PANIER D'ACHAT</h2>
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">ITEM</span>
+                            <span class="cart-price cart-header cart-column">PRIX</span>
+                            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                        </div>
+                        <div class="cart-items">
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Total</strong>
+                            <span class="cart-total-price">$0</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">ANNULER</button>
+                    <button type="button" class="btn btn-primary btn-purchase" data-toggle="modal" data-target="#ModalPayment" data-dismiss="modal">ACHETER</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Modal Cart-->
+
+
+    <!-- modal payment-->
+    <div class="modal fade" id="ModalPayment" tabindex="-1" role="dialog" aria-labelledby="ModalPayment" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalPayment">Détails de paiement</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                     </button>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <img class="img-fluid cc-img" src="img/creditcardicons.png">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form role="form">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Numéro de carte</label>
+                                        <div class="input-group">
+                                            <input type="tel" class="form-control" placeholder="Numéro de carte valide"> <span class="input-group-addon"><span class="fa fa-credit-card"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-7 col-lg-7">
+                                    <div class="form-group">
+                                        <label><span class="hidden-xsd-none d-sm-block">Expiration</span></label>
+                                        <input type="tel" class="form-control" placeholder="MM / YY">
+                                    </div>
+                                </div>
+                                <div class="col-5 col-lg-5 float-right">
+                                    <div class="form-group">
+                                        <label>Code CV</label>
+                                        <input type="tel" class="form-control" placeholder="CVC">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Propriétaire de la carte</label>
+                                        <input type="text" class="form-control" placeholder="Nom de titulaire de carte">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-12">
+                                <button id="checkout" class="btn btn-warning btn-lg btn-block">Traiter le paiement</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--end modal payment-->
+
+    <!-- scroll up button-->
+    <button onclick="topFunction()" id="myBtn" class="fa fa-arrow-up"></button>
+
+    <script>
+        var mybutton = document.getElementById("myBtn");
+        var height = $('home-screen').height();
+
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!--scroll up button-->
+
+    <!-- Footer-->
+    <div class="container-fluid mt-5" id="footer">
+        <div class="page-footer text-center">
+            <div class="row">
+                <div class="col-md-12 py-5 text-danger ">
+                    <div class="mb-5 flex-center">
+
+                        <!-- Facebook -->
+                        <a class="icfooter">
+                            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="icfooter">
+                            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!-- Google +-->
+                        <a class="icfooter">
+                            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="icfooter">
+                            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="icfooter">
+                            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Pinterest-->
+                        <a class="icfooter">
+                            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" text-center font-weight-bold py-4"> 2020 @ BDEB INTERFACE PROJET :BY GEORGE KABA && CAMSLEY GEORGES
+        </div>
+        </footer>
+        <!--end Footer-->
+
+</body>
+
+</html>
